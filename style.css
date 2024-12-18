@@ -1,0 +1,188 @@
+*, 
+::after, 
+::before
+{
+    box-sizing: border-box;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    /* Colors */
+    --primary-color:rgb(219, 219, 255);
+    --secondary-color: #ffd700;
+    --accent:rgb(255, 99, 255);
+    --valid:#008000;
+    --invalid:#ff0000;
+
+    /*Units*/
+    --padding:5px;
+    --margin:5px;
+    --width:60%;     
+
+}
+@font-face {
+    font-family: 'mulish'; /* Font name */
+    src: url('mulish.ttf') format('truetype'); /* Specify the file and format */
+  }
+.main 
+{
+    display: flex;
+    flex: 1;
+    font-family: 'mulish', sans-serif;
+    width: var(--width);
+    margin: 5px auto;
+    padding: var(--padding);
+    gap: 20px;
+    position: relative;
+}
+.left-content
+{
+    height: 80vh;
+    width: 50vw;
+    padding: var(--padding);
+    position: relative;
+}
+.back-image img
+{
+    width: 97%;
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+}
+.logo
+{
+    background-color: rgb(51, 51, 51);
+    width: 300px;
+    height: 20vh;
+    top: 20%;
+    bottom: 80%;
+    left: 0;
+    right: 0;
+    position: relative;
+    z-index: 2;
+    opacity: 80%;
+}
+.logo-img
+{
+    width: 25%;
+    position: absolute;
+    z-index: 3;
+    left: 20%;
+    right: 40%;
+    top:22%;
+    margin: 3px;
+}
+h1
+{
+    width: 25%;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    right: 40%;
+    top:30%;
+    color: rgb(255, 255, 255);
+}
+.caption
+{
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    left: 10px;
+    right: 0;
+    top:88%;
+    bottom: 0;
+    color: aliceblue;
+}
+
+.caption a
+{
+    text-decoration: none;
+    color: rgb(255, 208, 0);
+}
+.right-content
+{
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin);
+}
+.paragraphs
+{
+    margin-top: 5px;
+    padding: var(--padding);
+}
+.paragraphs p
+{
+    margin: 10px auto;
+    
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: var(--padding);
+    background-color: #feffbe;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Spacing between columns */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Label on top of input */
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+/* Default input styling */
+.form-group input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #E5E7EB; /* Light gray default border */
+    border-radius: 5px;
+    outline: none; /* Removes default focus outline */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Focused input: Blue border with subtle box-shadow */
+.form-group input:focus {
+    border-color: var(--valid); /* Blue border */
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5); /* Subtle blue shadow */
+}
+
+/* Invalid password inputs: Red border */
+.form-group input:invalid {
+    border-color: var(--invalid); /* Red border for invalid inputs */
+}
+
+/* Optional: Add a subtle hover effect for better UX */
+.form-group input:hover {
+    border-color: #A5B4FC; /* Light blue border on hover */
+}
+
+button.create-button {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.create-button:hover {
+    background-color: var(--secondary-color);
+    color:black;
+}
